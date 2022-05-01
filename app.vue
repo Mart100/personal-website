@@ -1,17 +1,20 @@
 <script lang="ts" setup>
 
 useHead({
-
+  title: 'Mart van Enckevort',
+  meta: [
+    { name: 'description', content: 'Portfolio of Mart van Enckevort, where you can find my latest programming projects.' }
+  ]
 })
 </script>
 
 <template>
   <Background></Background>
   <TheHeader></TheHeader>
-  <h1>Mart van Enckevort</h1>
+  <h1>Mart van Enckevort's Portfolio</h1>
   <p class="subtext">
     👋 Hi, I'm Mart van Enckevort, a student from the Netherlands<br>
-    This is my site where you can find all of my side-projects
+    This is my site where you can find all of my projects
   </p>
 
   <Projects></Projects>

@@ -13,11 +13,11 @@ const socials = {
 		image: 'https://i.imgur.com/G8qqexq.png'
 	},
 	steam: {
-		link: 'https://steamcommunity.com/id/Marto_0/',
+		link: 'https://steamcommunity.com/id/Marto_0',
 		image: 'https://i.imgur.com/Vz8YNxf.png'
 	},
 	linkedin: {
-		link: 'https://www.linkedin.com/in/mart-van-enckevort-a1b1961a9/',
+		link: 'https://www.linkedin.com/in/mart-van-enckevort-a1b1961a9',
 		image: 'https://i.imgur.com/PtGqXh3.png'
 	},
 	glitch: {
