@@ -11,7 +11,7 @@ useHead({
 <template>
   <Background></Background>
   <TheHeader></TheHeader>
-  <h1>Mart van Enckevort's Portfolio</h1>
+  <h1>Mart van Enckevort</h1>
   <p class="subtext">
     👋 Hi, I'm Mart van Enckevort, a student from the Netherlands<br>
     This is my site where you can find all of my projects
