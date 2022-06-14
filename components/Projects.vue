@@ -1,19 +1,22 @@
 <script setup lang="ts">
 import { ProjectData } from "./Project.vue"
 
-const { data:projects } = await useFetch<void, Error, string, any, (data:any) => ProjectData[]>(`https://api.jsonbin.io/v3/b/626d6b3538be296761fa3e0b`, { 
-	headers: { 
-		'X-Access-Key': '$2b$10$9EzVngdAKwnb4fBshTYYgOgzfXM7tmxqu9D8FL2a0jvueIruEpZT2'
+const { data:projects } = await useFetch<void, Error, string, any, (data:any) => ProjectData[]>('/api/projects', {
+	method: 'GET',
+	headers: {
+		'Content-Type': 'application/json'
 	},
-	key: 'projects-data',
+	key: 'projects',
 	transform: (data:any) => {
-		data.record.forEach((project, index) => {
-			let dateString = project.created.replaceAll('.', '0')
-			let dateParts = dateString.split('/')
-			let dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
-			data.record[index].created = dateObject
+		return data.map((project:any) => {
+
+			let dateParts = project.created.split('/')
+			let dateObject = new Date(+dateParts[2], +dateParts[1] - 1, +dateParts[0])
+			project.created = dateObject
+			project.score = Number(project.score)
+
+			return project as ProjectData
 		})
-		return data.record
 	}
 })
 
@@ -43,7 +46,7 @@ function sortClick(event:Event) {
 		el.innerText = 'Best'
 		projects.value = projects.value.sort((a, b) => b.score-a.score)
 	}
-
+	
 	selectedProjects.value = projects.value.slice(0, projectAmount.value)
 }
 

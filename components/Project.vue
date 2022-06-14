@@ -43,11 +43,11 @@ function mouseLeave(event:Event) {
 		<div class="description" v-html="project.description"></div>
 		<h3 class="title">{{project.title}}</h3>
 		<div class="buttons">
-			<a :href="project.code"><button class="code"><IconsCode></IconsCode></button></a>
+			<NuxtLink :href="project.code" v-if="project.code"><button class="code"><IconsCode></IconsCode></button></NuxtLink>
 			<button class="info" @click="infoClick"><IconsInfo></IconsInfo></button>
 		</div>
 
-		<a :href="project.link"><img :src="project.image"/></a>
+		<NuxtLink :href="project.link"><img :src="project.image"/></NuxtLink>
 		
 	</div>
 </template>

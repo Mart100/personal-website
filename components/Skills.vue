@@ -1,19 +1,18 @@
 <script lang="ts" setup>
 import { SkillData } from "./Skill.vue"
 
-const { data:skills } = await useFetch<void, Error, string, any, (data:any) => SkillData[]>(`https://api.jsonbin.io/v3/b/626d6afe019db4679693bb3e`, { 
-	headers: { 
-		'X-Access-Key': '$2b$10$9EzVngdAKwnb4fBshTYYgOgzfXM7tmxqu9D8FL2a0jvueIruEpZT2'
-	},
-	key: 'skills-data',
-	transform: (data:any) => {
-		data.record.forEach((skill, index) => {
-			if(skill.logo.startsWith('~/')) 
-				data.record[index].logo = data.record[index].logo.replace('~/', '../img/skills/')
-		})
-		return data.record
+const { data:skills } = await useFetch<void, Error, string, any, (data:any) => SkillData[]>('/api/skills', {
+	method: 'GET',
+	headers: {
+		'Content-Type': 'application/json'
 	}
 })
+
+skills.value.forEach((skill, index) => {
+	if(skill.logo.startsWith('~/')) 
+		skills.value[index].logo = skills.value[index].logo.replace('~/', '../img/skills/')
+})
+
 </script>
 
 <template>
