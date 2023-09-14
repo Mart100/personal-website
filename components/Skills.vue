@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import { SkillData } from "./Skill.vue"
 
-const { data:skills } = await useFetch<void, Error, string, any, (data:any) => SkillData[]>('/api/skills', {
+const { data } = await useFetch('/api/skills', {
 	method: 'GET',
 	headers: {
 		'Content-Type': 'application/json'
 	}
 })
+const skills = data as Ref<SkillData[]>
 
 skills.value.forEach((skill, index) => {
 	if(skill.logo.startsWith('~/')) 

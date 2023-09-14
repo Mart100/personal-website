@@ -4,7 +4,7 @@ import { SkillData } from './Skill.vue'
 const props = defineProps<{ skills:SkillData[] }>()
 
 const searchInput = ref('')
-const skillsFiltered = ref([])
+const skillsFiltered: Ref<any[]> = ref([])
 
 watch(searchInput, (search) => {
 	if(search.length === 0) return skillsFiltered.value = []
@@ -18,7 +18,7 @@ watch(searchInput, (search) => {
 	<div class="wrapper">
 		<div class="skillSearch">
 			<h3>And many more!</h3>
-			<input v-model="searchInput" placeholder="Type to see if I used a technology">
+			<input v-model="searchInput" placeholder="Type to see if I have used a technology">
 			<Skill v-for="skill of skillsFiltered" :skill="skill" :key="skill.name" class="small"></Skill>
 		</div>
 	</div>

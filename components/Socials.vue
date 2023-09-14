@@ -2,37 +2,37 @@
 const socials = {
 	github: {
 		link: 'https://github.com/Mart100',
-		image: 'https://i.imgur.com/pP7GNhC.png'
+		image: 'img/socials/github.png'
 	},
 	discord: {
 		link: 'https://i.imgur.com/eaqjvxs.png',
-		image: 'https://i.imgur.com/8XPlIYb.png'
+		image: 'img/socials/discord.png'
 	},
 	sololearn: {
 		link: 'https://www.sololearn.com/Profile/7589669',
-		image: 'https://i.imgur.com/G8qqexq.png'
+		image: 'img/socials/sololearn.png'
 	},
 	steam: {
 		link: 'https://steamcommunity.com/id/Marto_0',
-		image: 'https://i.imgur.com/Vz8YNxf.png'
+		image: 'img/socials/steam.png'
 	},
 	linkedin: {
 		link: 'https://www.linkedin.com/in/mart-van-enckevort-a1b1961a9',
-		image: 'https://i.imgur.com/PtGqXh3.png'
+		image: 'img/socials/linkedin.png'
 	},
-	glitch: {
-		link: 'https://glitch.com/@Mart100',
-		image: 'https://i.imgur.com/hIMVnoi.png'
+	youtube: {
+		link: 'https://www.youtube.com/channel/UCJJaxLhNgbrsvzol09TFDIQ',
+		image: 'img/socials/youtube.png'
 	}
-}
+} as {[key:string]: {link:string, image:string}}
 </script>
 
 <template>
 	<h2 id="socials">Socials</h2>
 	<div class="socials">
 		<a :href="social.link" class="social" v-for="(social, index) in socials" v-bind:key="index">
-			<img class="logo" :src="social.image">
-			<img class="filter" :src="social.image">
+			<NuxtImg class="logo" :src="social.image" />
+			<NuxtImg class="filter" :src="social.image" />
 		</a>
 	</div>
 </template>
@@ -50,11 +50,11 @@ h2 {
 
 	.social {
 		background-color: rgb(24, 25, 28);
-		box-shadow: 0 10px 30px -5px rgba(0,0,0,.3);
+		box-shadow: 0 10px 10px -5px rgba(0,0,0,.5);
 		border-radius: 25px;
-		width: 100px;
-		height: 100px;
-		padding: 20px;
+		width: 90px;
+		height: 90px;
+		padding: 25px;
 		margin: 20px;
 		display: inline-flex;
 		align-items: center;

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ProjectData } from "./Project.vue"
 
-const { data:projects } = await useFetch<void, Error, string, any, (data:any) => ProjectData[]>('/api/projects', {
+const { data:projects } = await useFetch('/api/projects', {
 	method: 'GET',
 	headers: {
 		'Content-Type': 'application/json'
@@ -16,9 +16,10 @@ const { data:projects } = await useFetch<void, Error, string, any, (data:any) =>
 			project.score = Number(project.score)
 
 			return project as ProjectData
-		})
-	}
-})
+		}) as ProjectData[]
+	},
+	default: () => [] as ProjectData[]
+}) 
 
 projects.value = projects.value.sort((a, b) => b.score-a.score)
 let projectAmount = ref(8)
@@ -31,7 +32,7 @@ onMounted(() => {
 		(elements[i] as any).style.animationDelay = randomDuration + 'ms';  
 	}
 
-	if(window.innerWidth > 768) document.getElementById('moreProjects').click()
+	if(window.innerWidth > 768) document.getElementById('moreProjects')!.click()
 	
 })
 

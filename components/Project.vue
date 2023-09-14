@@ -18,8 +18,6 @@ defineProps<Props>()
 const projectStyle = ref('')
 const projectClasses = ref('')
 function infoClick(event:Event) {
-	const target = event.target as HTMLInputElement
-	const transformY = new WebKitCSSMatrix(window.getComputedStyle(target.parentElement.parentElement).transform).m42
 	projectStyle.value = `animation: unset !important;`
 	setTimeout(() => {
 		projectClasses.value = 'flipped'
@@ -27,12 +25,10 @@ function infoClick(event:Event) {
 }
 
 function mouseLeave(event:Event) {
-	const target = event.target as HTMLInputElement
 	projectClasses.value = ''
 	setTimeout(() => {
 		projectStyle.value = ``
 	}, 500)
-	
 }
 
 
@@ -47,7 +43,7 @@ function mouseLeave(event:Event) {
 			<button class="info" @click="infoClick"><IconsInfo></IconsInfo></button>
 		</div>
 
-		<NuxtLink :href="project.link"><img :src="project.image"/></NuxtLink>
+		<NuxtLink :href="project.link"><NuxtImg :src="project.image"></NuxtImg></NuxtLink>
 		
 	</div>
 </template>
@@ -70,7 +66,7 @@ function mouseLeave(event:Event) {
 	border-radius: 20px;
 	transition: all 0.4s ease;
 	animation: hoverAnimation 19s ease infinite reverse;
-	box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px -8px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px 5px;
 	transform-style: preserve-3d;
 	text-align: left;
 	background-color:rgb(30, 32, 35);
@@ -160,7 +156,7 @@ function mouseLeave(event:Event) {
 				}
 				&:hover {
 					background-color: rgb(255, 71, 87);
-					box-shadow: rgba(255, 71, 87, 0.3) 0px 0px 20px 5px;
+					box-shadow: rgba(255, 71, 87, 0.3) 0px 0px 10px 5px;
 					svg {
 						fill: white;
 					}
@@ -170,8 +166,9 @@ function mouseLeave(event:Event) {
 	}
 
 	&:hover {
-		box-shadow: rgba(0, 0, 0, 0.7) 0px 15px 30px -8px;
+		box-shadow: rgba(0, 0, 0, 0.7) 0px 15px 50px -8px;
 		animation-play-state: paused;
+		translate: 0px -10px;
 	}
 
 	> a {
