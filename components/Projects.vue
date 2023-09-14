@@ -14,6 +14,7 @@ const { data:projects } = await useFetch('/api/projects', {
 			let dateObject = new Date(+dateParts[2], +dateParts[1] - 1, +dateParts[0])
 			project.created = dateObject
 			project.score = Number(project.score)
+			if(project.link.startsWith('https://mart100.github.io/')) project.link = project.link.replace('https://mart100.github.io/', '/gh/')
 
 			return project as ProjectData
 		}) as ProjectData[]
