@@ -28,6 +28,7 @@ useHead({
 
 html {
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 body {
