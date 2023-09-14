@@ -1,10 +1,16 @@
 <script lang="ts" setup>
 
+interface Particle {
+	pos: { x: number, y: number},
+	vel: { x: number, y: number}
+}
+
 onMounted(() => {
-	const nuxtRoot = document.getElementById("__nuxt")
-	let canvas, ctx
-	let particles = []
-	let lines = []
+	const nuxtRoot = document.getElementById("__nuxt")!
+	let canvas = document.getElementById('background') as HTMLCanvasElement
+	let ctx = canvas.getContext('2d')!
+	let particles: Particle[] = []
+	let lines: [Particle, Particle][] = []
 	const speed = 0.5
 	const fpsController = {
 		fpsInterval: 50,
@@ -52,8 +58,6 @@ onMounted(() => {
 			ctx.stroke()
 		}
 	}
-	canvas = document.getElementById('background')
-	ctx = canvas.getContext('2d')
 	function calculateLines() {
 		lines = []
 		for(let p1 of particles) {
@@ -67,7 +71,7 @@ onMounted(() => {
 			}
 		}
 	}
-	function createParticles(amount, startX, startY, width, height) {
+	function createParticles(amount: number, startX: number, startY: number, width: number, height: number) {
 		for(let i=0;i<amount;i++) {
 			particles.push({ 
 				pos: { x: startX+Math.random()*width, y: startY+Math.random()*height }, 
@@ -77,7 +81,7 @@ onMounted(() => {
 	}
 	window.onload = function() {
 		frame()
-		document.getElementById("background").classList.add('show')
+		canvas.classList.add('show')
 	}
 	setInterval(() => {
 		for(let p of particles) {
