@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { SkillData } from "./Skill.vue"
+import { type SkillData } from "./Skill.vue"
 
 const { data } = await useFetch('/api/skills', {
 	method: 'GET',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-export interface ProjectData  {
+export interface ProjectData {
 	title: string
 	image: string
 	link: string
@@ -17,14 +17,14 @@ defineProps<Props>()
 
 const projectStyle = ref('')
 const projectClasses = ref('')
-function infoClick(event:Event) {
+function infoClick(event: Event) {
 	projectStyle.value = `animation: unset !important;`
 	setTimeout(() => {
 		projectClasses.value = 'flipped'
 	}, 1)
 }
 
-function mouseLeave(event:Event) {
+function mouseLeave(event: Event) {
 	projectClasses.value = ''
 	setTimeout(() => {
 		projectStyle.value = ``
@@ -37,24 +37,46 @@ function mouseLeave(event:Event) {
 <template>
 	<div class="project" :style="projectStyle" :class="projectClasses" @mouseleave="mouseLeave">
 		<div class="description" v-html="project.description"></div>
-		<h3 class="title">{{project.title}}</h3>
+		<h3 class="title">{{ project.title }}</h3>
 		<div class="buttons">
-			<NuxtLink :href="project.code" v-if="project.code"><button class="code"><IconsCode></IconsCode></button></NuxtLink>
-			<button class="info" @click="infoClick"><IconsInfo></IconsInfo></button>
+			<a :href="project.code" target="_blank" rel="noopener noreferrer">
+				<button class="code">
+					<IconsCode></IconsCode>
+				</button>
+			</a>
+			<button class="info" @click="infoClick">
+				<IconsInfo></IconsInfo>
+			</button>
 		</div>
 
-		<NuxtLink :href="project.link"><NuxtImg :src="project.image"></NuxtImg></NuxtLink>
-		
+		<NuxtLink :href="project.link">
+			<NuxtImg :src="project.image"></NuxtImg>
+		</NuxtLink>
+
 	</div>
 </template>
 
 <style lang="scss" scoped>
 @keyframes hoverAnimation {
-  0% { transform: translateY(0) }
-  30% { transform: translateY(-10px) }
-	50% { transform: translateY(4px) }
-	70% { transform: translateY(-15px) }
-	100% { transform: translateY(0) }
+	0% {
+		transform: translateY(0)
+	}
+
+	30% {
+		transform: translateY(-10px)
+	}
+
+	50% {
+		transform: translateY(4px)
+	}
+
+	70% {
+		transform: translateY(-15px)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
 }
 
 .project {
@@ -69,19 +91,20 @@ function mouseLeave(event:Event) {
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px 5px;
 	transform-style: preserve-3d;
 	text-align: left;
-	background-color:rgb(30, 32, 35);
-	
+	background-color: rgb(30, 32, 35);
+
 	&.flipped {
 		transform: rotateY(180deg);
 
 		.buttons {
 			display: none;
 		}
+
 		.title {
 			transform: rotateY(180deg);
 		}
 	}
-	
+
 
 	.description {
 		transition: all 2s ease;
@@ -141,9 +164,11 @@ function mouseLeave(event:Event) {
 				svg {
 					fill: rgb(24, 84, 232);
 				}
+
 				&:hover {
 					background-color: rgb(24, 84, 232);
 					box-shadow: rgba(24, 84, 232, 0.3) 0px 0px 20px 5px;
+
 					svg {
 						fill: white;
 					}
@@ -154,9 +179,11 @@ function mouseLeave(event:Event) {
 				svg {
 					fill: rgb(255, 71, 87);
 				}
+
 				&:hover {
 					background-color: rgb(255, 71, 87);
 					box-shadow: rgba(255, 71, 87, 0.3) 0px 0px 10px 5px;
+
 					svg {
 						fill: white;
 					}
@@ -171,7 +198,7 @@ function mouseLeave(event:Event) {
 		translate: 0px -10px;
 	}
 
-	> a {
+	>a {
 		backface-visibility: hidden;
 
 		img {
@@ -180,7 +207,7 @@ function mouseLeave(event:Event) {
 			border-radius: 20px;
 			background-color: rgb(24, 25, 28);
 			backface-visibility: hidden;
-			
+
 		}
 	}
 
@@ -194,9 +221,9 @@ function mouseLeave(event:Event) {
 		.title {
 			font-size: 16px;
 		}
-		.buttons  {
+
+		.buttons {
 			height: 13%;
 		}
 	}
-}
-</style>
+}</style>

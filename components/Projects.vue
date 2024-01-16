@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ProjectData } from "./Project.vue"
+import { type ProjectData } from "./Project.vue"
 
 const { data:projects } = await useFetch('/api/projects', {
 	method: 'GET',
@@ -15,7 +15,6 @@ const { data:projects } = await useFetch('/api/projects', {
 			project.created = dateObject
 			project.score = Number(project.score)
 			project.image = project.image.replace('.png' , 'm.png')
-			if(project.link.startsWith('https://mart100.github.io/')) project.link = project.link.replace('https://mart100.github.io/', '/gh/')
 
 			return project as ProjectData
 		}) as ProjectData[]
