@@ -1,17 +1,18 @@
 <script lang="ts" setup>
 import { type SkillData } from "./Skill.vue"
 
-const { data } = await useFetch('/api/skills', {
-	method: 'GET',
-	headers: {
-		'Content-Type': 'application/json'
-	}
-})
-const skills = data as Ref<SkillData[]>
+const skills = await useAsyncData("skills", () => queryContent('/skills').findOne()).then(({ data }) => {
+	let skills: SkillData[] = []
+	for (let skill of data.value!.skills) {
+		if (skill.isProcessed != true) {
+			if (skill.logo.startsWith('~/'))
+				skill.logo = skill.logo.replace('~/', '../img/skills/')
 
-skills.value.forEach((skill, index) => {
-	if(skill.logo.startsWith('~/')) 
-		skills.value[index].logo = skills.value[index].logo.replace('~/', '../img/skills/')
+			skill.isProcessed = true
+		}
+		skills.push(skill)
+	}
+	return skills
 })
 
 </script>

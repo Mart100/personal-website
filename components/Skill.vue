@@ -5,7 +5,8 @@ export interface SkillData {
 	knowledge:number
 	name:string
 	duration:string
-	big?:boolean
+	big?: boolean
+	isProcessed: boolean
 }
 
 defineProps<{skill: SkillData}>()

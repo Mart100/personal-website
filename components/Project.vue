@@ -8,6 +8,7 @@ export interface ProjectData {
 	created: Date
 	score: number
 	description: string
+	isProcessed: boolean
 }
 
 interface Props {
@@ -226,4 +227,5 @@ function mouseLeave(event: Event) {
 			height: 13%;
 		}
 	}
-}</style>
+}
+</style>
