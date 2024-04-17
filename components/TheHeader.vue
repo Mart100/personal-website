@@ -2,58 +2,97 @@
 	<nav>
 		<div class="container">
 			<img src="~/assets/img/carrotFish.png">
-			<div class="nav-item"><a href="#projects">Projects</a></div>
-			<div class="nav-item"><a href="#skills">Skills</a></div>
-			<div class="nav-item"><a href="#socials">Socials</a></div>
+			<div class="nav-item" :class="{ active: activeSection === 'projects' }"><a href="#projects">Projects</a>
+			</div>
+			<div class="nav-item" :class="{ active: activeSection === 'skills' }"><a href="#skills">Skills</a></div>
+			<div class="nav-item" :class="{ active: activeSection === 'socials' }"><a href="#socials">Socials</a></div>
 		</div>
 	</nav>
 </template>
 
 <script>
-export default {
+import { ref, onMounted, onUnmounted } from 'vue';
 
-}
+export default {
+	setup() {
+		const activeSection = ref(null);
+		let observers = [];
+		onMounted(async () => {
+			await nextTick();
+			const sections = ['projects', 'skills', 'socials'];
+
+			sections.forEach((section) => {
+				const element = document.getElementById(section);
+
+				const observer = new IntersectionObserver(
+					(entries) => {
+						if (entries[0].isIntersecting) {
+							activeSection.value = section;
+						}
+					},
+					{
+						rootMargin: '-60% 0px -30% 0px', // Shrink the viewport by 25% from the top and bottom
+						threshold: 0.0, // Trigger the callback when 50% of the element is visible within the shrunken viewport 
+					}
+				);
+
+				observer.observe(element);
+				observers.push(observer);
+			});
+		});
+
+		onUnmounted(() => {
+			observers.forEach((observer) => observer.disconnect());
+		});
+
+		return { activeSection };
+	},
+};
 </script>
 
 <style lang="scss" scoped>
-	nav {
-		height: 50px;
-		text-align: center;
-		position: sticky;
-		top: 0px;
-		background-color:rgb(30, 32, 35);
-		z-index: 1000;
+nav {
+	height: 50px;
+	text-align: center;
+	position: sticky;
+	top: 0px;
+	background-color: rgb(30, 32, 35);
+	z-index: 1000;
 
-		.container {
-			height: 100%;
-			position: relative;
-			display: flex;
-			max-width: 1000px;
+	.container {
+		height: 100%;
+		position: relative;
+		display: flex;
+		max-width: 1000px;
+		margin: auto;
+
+		.nav-item {
+			display: inline-block;
 			margin: auto;
+			font-size: 16px;
 
-			.nav-item {
-				display: inline-block;
-				margin: auto;
-				font-size: 16px;
-			}
-
-			img {
-				height: 100%;
-				margin: auto;
-				display: inline-block;
-			}
-			a {
-				color: gray;
-				text-decoration: none;
-				font-weight: 700;
-
-				&:hover {
-					color: white;
-				}
+			&.active a {
+				color: white;
 			}
 		}
 
+		img {
+			height: 100%;
+			margin: auto;
+			display: inline-block;
+		}
 
+		a {
+			color: gray;
+			text-decoration: none;
+			font-weight: 700;
+
+			&:hover {
+				color: white;
+			}
+		}
 	}
 
+
+}
 </style>

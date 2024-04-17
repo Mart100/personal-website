@@ -24,7 +24,7 @@ const socials = {
 		link: 'https://www.youtube.com/channel/UCJJaxLhNgbrsvzol09TFDIQ',
 		image: 'img/socials/youtube.png'
 	}
-} as {[key:string]: {link:string, image:string}}
+} as { [key: string]: { link: string, image: string } }
 </script>
 
 <template>
@@ -38,10 +38,10 @@ const socials = {
 </template>
 
 <style lang="scss" scoped>
-
 h2 {
 	margin-top: 50px !important;
 }
+
 .socials {
 	display: flex;
 	justify-content: center;
@@ -50,7 +50,7 @@ h2 {
 
 	.social {
 		background-color: rgb(24, 25, 28);
-		box-shadow: 0 10px 10px -5px rgba(0,0,0,.5);
+		box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .5);
 		border-radius: 25px;
 		width: 90px;
 		height: 90px;
@@ -64,7 +64,7 @@ h2 {
 		aspect-ratio: 1;
 
 		&:hover {
-			box-shadow: 0 10px 30px -5px rgba(0,0,0,.5);
+			box-shadow: 0 10px 30px -5px rgba(0, 0, 0, .5);
 			transform: translateY(10px);
 		}
 
@@ -89,15 +89,14 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
-.socials {
-	.social {
-		width: 50px;
-		height: 50px;
-		margin: 10px;
-		padding: 10px;
+	.socials {
+		.social {
+			width: 50px;
+			height: 50px;
+			margin: 10px;
+			padding: 10px;
+		}
 	}
-}
 
 }
-
 </style>

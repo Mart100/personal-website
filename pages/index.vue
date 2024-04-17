@@ -32,14 +32,14 @@ html {
 }
 
 body {
-  background-color:rgb(30, 32, 35);
+  background-color: rgb(30, 32, 35);
   font-family: Poppins;
   margin: 0px;
 
   #__nuxt {
     position: relative;
-    
-    > h1 {
+
+    >h1 {
       font-size: 7vw;
       font-weight: 100;
       margin: auto;
@@ -47,7 +47,7 @@ body {
       color: white;
     }
 
-    > .subtext {
+    >.subtext {
       font-size: 1.2vw;
       font-weight: 500;
       margin: auto;
@@ -55,7 +55,7 @@ body {
       color: white;
     }
 
-    > h2 {
+    h2 {
       font-size: 5vw;
       font-weight: 100;
       margin: auto;
@@ -68,9 +68,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  
+
   body #__nuxt {
-    > h1, > h2 {
+
+    >h1,
+    >h2 {
       font-size: 8vw;
     }
 
