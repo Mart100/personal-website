@@ -1,0 +1,386 @@
+{
+    "skills": [
+        {
+            "name": "Javascript",
+            "knowledge": 90,
+            "projects": "~50",
+            "duration": "5 Years",
+            "big": true,
+            "logo": "~/javascript.png",
+            "icon": "devicon:javascript"
+        },
+        {
+            "name": "Typescript",
+            "knowledge": 85,
+            "duration": "2 Years",
+            "big": true,
+            "logo": "~/typescript.png",
+            "icon": "devicon:typescript"
+        },
+        {
+            "name": "Discord.js",
+            "knowledge": 85,
+            "duration": "3 Years",
+            "big": true,
+            "logo": "~/discordjs.png",
+            "icon": "devicon:discordjs"
+        },
+        {
+            "name": "Electron",
+            "knowledge": 80,
+            "duration": "5 Months",
+            "big": true,
+            "logo": "~/electron.png",
+            "icon": "skill-icons:electron"
+        },
+        {
+            "name": "Nuxt & Vue.js",
+            "knowledge": 75,
+            "duration": "3 Months",
+            "big": true,
+            "logo": "~/nuxt.png",
+            "icon": "devicon:nuxtjs"
+        },
+        {
+            "name": "PHP",
+            "knowledge": 70,
+            "duration": "6 Months",
+            "big": true,
+            "logo": "~/php.png",
+            "icon": "devicon:php"
+        },
+        {
+            "name": "Deno",
+            "knowledge": 65,
+            "duration": "2 Months",
+            "big": true,
+            "logo": "~/deno.png",
+            "icon": "logos:deno"
+        },
+        {
+            "name": "Flutter",
+            "knowledge": 65,
+            "duration": "5 Months",
+            "big": true,
+            "logo": "~/flutter.png",
+            "icon": "devicon:flutter"
+        },
+        {
+            "name": "Python",
+            "knowledge": 60,
+            "duration": "5 Months",
+            "big": true,
+            "logo": "~/python.png",
+            "icon": "devicon:python"
+        },
+        {
+            "name": "Laravel",
+            "knowledge": 50,
+            "duration": "2 Months",
+            "big": true,
+            "logo": "~/laravel.png",
+            "icon": "devicon:laravel"
+        },
+        {
+            "name": "Socket.io",
+            "knowledge": 80,
+            "duration": "6 Month",
+            "logo": "https://socket.io/images/logo.svg",
+            "icon": "logos:socket-io"
+        },
+        {
+            "name": "Express",
+            "knowledge": 80,
+            "duration": "2 Years",
+            "logo": "https://expressjs.com/images/express-facebook-share.png",
+            "icon": "skill-icons:expressjs-light"
+        },
+        {
+            "name": "Visual Studio Code",
+            "knowledge": 90,
+            "duration": "3 Years",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png",
+            "icon": "logos:visual-studio-code"
+        },
+        {
+            "name": "Visual Studio",
+            "knowledge": 60,
+            "duration": "5 Months",
+            "logo": "https://1000logos.net/wp-content/uploads/2020/08/Visual-Studio-Logo.png",
+            "icon": "logos:visual-studio"
+        },
+        {
+            "name": "Atom",
+            "knowledge": 90,
+            "duration": "2 Years",
+            "logo": "https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png",
+            "icon": "devicon:atom"
+        },
+        {
+            "name": "Java",
+            "knowledge": 40,
+            "duration": "2 Months",
+            "logo": "https://i.pinimg.com/originals/e9/94/61/e99461fdd5b3db8bdb3081d8acf5e524.png",
+            "icon": "devicon:java"
+        },
+        {
+            "name": "C#",
+            "knowledge": 50,
+            "duration": "3 Months",
+            "logo": "https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png",
+            "icon": "devicon:csharp"
+        },
+        {
+            "name": "React",
+            "knowledge": 40,
+            "duration": "1 Month",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+            "icon": "devicon:react"
+        },
+        {
+            "name": "Axios",
+            "knowledge": 80,
+            "duration": "4 Month",
+            "logo": "https://user-images.githubusercontent.com/43313420/105883616-57dbeb00-6007-11eb-9df2-de0e2a42655c.png",
+            "icon": "logos:axios"
+        },
+        {
+            "name": "Jquery",
+            "knowledge": 95,
+            "duration": "5 Years",
+            "logo": "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+            "icon": "devicon:jquery"
+        },
+        {
+            "name": "Chart.js",
+            "knowledge": 80,
+            "duration": "3 Months",
+            "logo": "https://www.chartjs.org/img/chartjs-logo.svg",
+            "icon": "file-icons:chartjs"
+        },
+        {
+            "name": "Postman",
+            "knowledge": 80,
+            "duration": "2 Years",
+            "logo": "https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8",
+            "icon": "logos:postman"
+        },
+        {
+            "name": "Firebase",
+            "knowledge": 70,
+            "duration": "2 Years",
+            "logo": "https://seeklogo.com/images/F/firestore-logo-3828671CC5-seeklogo.com.png",
+            "icon": "logos:firebase"
+        },
+        {
+            "name": "MongoDB",
+            "knowledge": 70,
+            "duration": "5 Months",
+            "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fnl%2Fpictogram%2Fmongodb-origineel-woordmerk-logo%2F146425&psig=AOvVaw2YPYtqUfYwxoGUVz7smSVS&ust=1651418965801000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPj0i5mNvPcCFQAAAAAdAAAAABAD",
+            "icon": "devicon:mongodb"
+        },
+        {
+            "name": "MySQL",
+            "knowledge": 65,
+            "duration": "3 Months",
+            "logo": "https://www.mysql.com/common/logos/logo-mysql-170x115.png",
+            "icon": "devicon:mysql"
+        },
+        {
+            "name": "Prisma",
+            "knowledge": 70,
+            "duration": "2 Years",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXnnYlmlxe67CtuSstx4oMBxW0eWi29jjWsm6lNQCQr6JFnEyzhmt7_ADtuH0_pqUn0GI&usqp=CAU",
+            "icon": "logos:prisma"
+        },
+        {
+            "name": "Gulp",
+            "knowledge": 60,
+            "duration": "2 Months",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Gulp.js_Logo.svg/1200px-Gulp.js_Logo.svg.png",
+            "icon": "logos:gulp"
+        },
+        {
+            "name": "Jest",
+            "knowledge": 40,
+            "duration": "2 Month",
+            "logo": "https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png",
+            "icon": "logos:jest"
+        },
+        {
+            "name": "Github",
+            "knowledge": 90,
+            "duration": "6 Years",
+            "logo": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            "icon": "devicon:github"
+        },
+        {
+            "name": "Gitlab",
+            "knowledge": 70,
+            "duration": "10 Months",
+            "logo": "https://pbs.twimg.com/media/Djaypz6XcAAqwck.png",
+            "icon": "logos:gitlab"
+        },
+        {
+            "name": "Ubuntu",
+            "knowledge": 70,
+            "duration": "10 Months",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png",
+            "icon": "logos:ubuntu"
+        },
+        {
+            "name": "Debian",
+            "knowledge": 60,
+            "duration": "4 Months",
+            "logo": "https://e7.pngegg.com/pngimages/319/946/png-clipart-debian-logo-linux-ubuntu-fedora-linux-text-logo.png",
+            "icon": "logos:debian"
+        },
+        {
+            "name": "Windows",
+            "knowledge": 70,
+            "duration": "10 Months",
+            "logo": "https://logowik.com/content/uploads/images/windows-116906.jpg",
+            "icon": "devicon:windows11"
+        },
+        {
+            "name": "Nodemon",
+            "knowledge": 80,
+            "duration": "4 Years",
+            "logo": "https://user-images.githubusercontent.com/13700/35731649-652807e8-080e-11e8-88fd-1b2f6d553b2d.png",
+            "icon": "logos:nodemon"
+        },
+        {
+            "name": "NPM",
+            "knowledge": 80,
+            "duration": "5 Years",
+            "logo": "https://cdn.worldvectorlogo.com/logos/npm-square-red-1.svg",
+            "icon": "logos:npm"
+        },
+        {
+            "name": "Yarn",
+            "knowledge": 40,
+            "duration": "1 Month",
+            "logo": "https://seeklogo.com/images/Y/yarn-logo-F5E7A65FA2-seeklogo.com.png",
+            "icon": "logos:yarn"
+        },
+        {
+            "name": "PNPM",
+            "knowledge": 60,
+            "duration": "5 Years",
+            "logo": "https://img.stackshare.io/service/10903/JLVo_YPe_400x400.jpg",
+            "icon": "logos:pnpm"
+        },
+        {
+            "name": "Composer",
+            "knowledge": 60,
+            "duration": "4 Months",
+            "logo": "https://getcomposer.org/img/logo-composer-transparent.png",
+            "icon": "logos:composer"
+        },
+        {
+            "name": "Unity",
+            "knowledge": 50,
+            "duration": "5 Month",
+            "logo": "https://seeklogo.com/images/U/unity-logo-988A22E703-seeklogo.com.png",
+            "icon": "devicon:unity"
+        },
+        {
+            "name": "Skript",
+            "knowledge": 90,
+            "duration": "1 Year",
+            "logo": "https://user-images.githubusercontent.com/24407938/43425610-d4c6475c-945b-11e8-809d-29136b617808.png",
+            "icon": "ic:sharp-code"
+        },
+        {
+            "name": ".NET",
+            "knowledge": 60,
+            "duration": "3 Months",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/.NET_Logo.svg/2048px-.NET_Logo.svg.png",
+            "icon": "devicon:dot-net"
+        },
+        {
+            "name": "Backpack for Laravel",
+            "knowledge": 70,
+            "duration": "3 Months",
+            "logo": "data:image/png;base64,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",
+            "icon": "noto:backpack"
+        },
+        {
+            "name": "NGINX",
+            "knowledge": 65,
+            "duration": "3 Months",
+            "logo": "data:image/png;base64,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",
+            "icon": "logos:nginx"
+        },
+        {
+            "name": "PM2",
+            "knowledge": 70,
+            "duration": "4 Years",
+            "logo": "https://avatars.githubusercontent.com/u/57546605?s=280&v=4",
+            "icon": "logos:pm2-icon"
+        },
+        {
+            "name": "Svelte",
+            "knowledge": 50,
+            "duration": "2 Months",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png",
+            "icon": "devicon:svelte"
+        },
+        {
+            "name": "Supabase",
+            "knowledge": 60,
+            "duration": "2 Months",
+            "logo": "https://avatars.githubusercontent.com/u/54469796?s=280&v=4",
+            "icon": "devicon:supabase"
+        },
+        {
+            "name": "Rust",
+            "knowledge": 60,
+            "duration": "3 Months",
+            "logo": "https://www.rust-lang.org/static/images/rust-social.jpg",
+            "icon": "devicon:rust"
+        },
+        {
+            "name": "Vite",
+            "knowledge": 60,
+            "duration": "3 Months",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg",
+            "icon": "devicon:vitejs"
+        },
+        {
+            "name": "Github Copilot",
+            "knowledge": 80,
+            "duration": "2 Years",
+            "logo": "https://miro.medium.com/v2/resize:fit:700/0*oRRpMJ9XqkRnYLhW.png",
+            "icon": "logos:github-copilot"
+        },
+        {
+            "name": "Sass",
+            "knowledge": 80,
+            "duration": "2 Years",
+            "logo": "https://miro.medium.com/v2/resize:fit:700/0*oRRpMJ9XqkRnYLhW.png",
+            "icon": "logos:sass"
+        },
+        {
+            "name": "CSS",
+            "knowledge": 80,
+            "duration": "2 Years",
+            "logo": "https://miro.medium.com/v2/resize:fit:700/0*oRRpMJ9XqkRnYLhW.png",
+            "icon": "devicon:css3"
+        },
+        {
+            "name": "Vercel",
+            "knowledge": 40,
+            "duration": "2 Years",
+            "logo": "https://miro.medium.com/v2/resize:fit:700/0*oRRpMJ9XqkRnYLhW.png",
+            "icon": "devicon:vercel"
+        },
+        {
+            "name": "Node.js",
+            "knowledge": 40,
+            "duration": "2 Years",
+            "logo": "https://miro.medium.com/v2/resize:fit:700/0*oRRpMJ9XqkRnYLhW.png",
+            "icon": "devicon:nodejs"
+        }
+    ]
+}

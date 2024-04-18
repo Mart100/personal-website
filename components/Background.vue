@@ -7,6 +7,9 @@ interface Particle {
 
 let background = ref(null as HTMLCanvasElement | null)
 
+let animationFrameId: number | null = null;
+let intervalId: NodeJS.Timeout | null = null;
+
 onMounted(async () => {
 
 	const nuxtRoot = document.getElementById("__nuxt")!
@@ -21,18 +24,21 @@ onMounted(async () => {
 		previousTick: Date.now()
 	}
 	function frame() {
-		window.requestAnimationFrame(frame)
+		animationFrameId = window.requestAnimationFrame(frame)
 		let elapsed = Date.now() - fpsController.previousTick
 		if (elapsed < fpsController.fpsInterval) return
 		if (canvas.width !== window.innerWidth) canvas.width = window.innerWidth
-		if (canvas.height !== nuxtRoot.offsetHeight) {
-			let heightDiff = nuxtRoot.offsetHeight - canvas.height
+
+		let currentHeight = nuxtRoot.offsetHeight + 50
+
+		if (canvas.height !== currentHeight) {
+			let heightDiff = currentHeight - canvas.height
 			let amount = (heightDiff * canvas.width) / 8_000
 
 			createParticles(amount, 0, canvas.height, canvas.width, heightDiff)
 			calculateLines()
 
-			canvas.height = nuxtRoot.offsetHeight
+			canvas.height = currentHeight
 		}
 		fpsController.previousTick = Date.now() - (elapsed % fpsController.fpsInterval)
 		ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -103,7 +109,7 @@ onMounted(async () => {
 		}
 	}
 
-	setInterval(() => {
+	intervalId = setInterval(() => {
 		calculateLines()
 	}, 5000)
 
@@ -111,6 +117,11 @@ onMounted(async () => {
 
 	frame()
 	canvas.classList.add('show')
+})
+
+onBeforeUnmount(() => {
+	if (animationFrameId) window.cancelAnimationFrame(animationFrameId)
+	if (intervalId) clearInterval(intervalId)
 })
 
 </script>
@@ -122,7 +133,6 @@ onMounted(async () => {
 <style lang="scss" scoped>
 #background {
 	width: 100%;
-	height: 100%;
 	position: absolute;
 	opacity: 0;
 	z-index: -1;

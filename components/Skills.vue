@@ -1,18 +1,7 @@
 <script lang="ts" setup>
-import { type SkillData } from "./Skill.vue"
 
-const skills = await useAsyncData("skills", () => queryContent('/skills').findOne()).then(({ data }) => {
-	let skills: SkillData[] = []
-	for (let skill of data.value!.skills) {
-		if (skill.isProcessed != true) {
-			if (skill.logo.startsWith('~/'))
-				skill.logo = skill.logo.replace('~/', '../img/skills/')
-
-			skill.isProcessed = true
-		}
-		skills.push(skill)
-	}
-	return skills
+const skills = await useAsyncData("skills", () => queryContent('data/skills').findOne()).then(({ data }) => {
+	return ref(parseSkillsJson(data.value!.skills))
 })
 
 </script>

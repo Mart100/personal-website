@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { type SkillData } from './Skill.vue'
+import type { SkillData } from '~/types/types';
+
 
 const props = defineProps<{ skills: SkillData[] }>()
 

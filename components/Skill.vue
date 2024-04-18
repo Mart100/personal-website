@@ -1,13 +1,6 @@
 <script lang="ts" setup>
+import type { SkillData } from '~/types/types';
 
-export interface SkillData {
-	logo: string
-	knowledge: number
-	name: string
-	duration: string
-	big?: boolean
-	isProcessed: boolean
-}
 
 defineProps<{ skill: SkillData }>()
 
@@ -16,7 +9,7 @@ defineProps<{ skill: SkillData }>()
 
 <template>
 	<div class="skill">
-		<img :src="skill.logo">
+		<Icon :name="skill.icon" size="52" />
 		<div class="details">
 			<span><span class="name">{{ skill.name }}</span><span class="duration">{{ skill.duration }}</span><span
 					class="knowledge">{{ skill.knowledge }}%</span></span>

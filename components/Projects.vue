@@ -1,27 +1,22 @@
 <script setup lang="ts">
+import type { ProjectData } from '~/types/types';
 
-
-import { type ProjectData } from "./Project.vue"
 
 let projectsElement = ref<HTMLElement>()
 let moreProjectsElement = ref<HTMLElement>()
 
-let projects = await useAsyncData("projects", () => queryContent(`projects`).findOne()).then(({ data }) => {
-	let projs = [] as ProjectData[]
-	for (let project of data.value!.projects) {
-		if (project.isProcessed != true) {
-			let dateParts = project.created.split('/')
-			let dateObject = new Date(+dateParts[2], +dateParts[1] - 1, +dateParts[0])
-			project.created = dateObject
-			project.score = Number(project.score)
-			project.image = project.image.replace('.png', 'm.png')
-			project.isProcessed = true
-		}
-		projs.push(project)
+let { projects, skills } = await useAsyncData("all", () => queryContent('data').find()).then(({ data }) => {
+
+	return {
+		projects: ref(parseProjectsJson(data.value![0].projects)),
+		skills: ref(parseSkillsJson(data.value![1].skills))
 	}
-	return ref(projs)
 })
 
+const skillIcons: Record<string, string> = skills.value.reduce((acc, skill) => {
+	acc[skill.name] = skill.icon
+	return acc
+}, {} as Record<string, string>)
 
 projects.value = projects.value.sort((a, b) => b.score - a.score)
 let projectAmount = ref(8)
@@ -67,8 +62,9 @@ function moreProjects(event: Event) {
 		</h2>
 
 		<div class="projects" ref="projectsElement">
-			<Project v-for="project of selectedProjects" :key="project.title" :project="project">
-			</Project>
+			<ProjectCard v-for="project of selectedProjects" :key="project.title" :project="project"
+				:skill-icons="skillIcons">
+			</ProjectCard>
 		</div>
 		<div class="more" ref="moreProjectsElement" @click="moreProjects"
 			v-if="projects && projectAmount < projects.length">Load

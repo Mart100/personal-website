@@ -121,9 +121,21 @@
             "title": "Multiplayer game",
             "image": "https://i.imgur.com/M5DH0yq.png",
             "link": "https://fuct.herokuapp.com/",
+            "code": "https://github.com/Mart100/fuct",
             "created": "03/03/2018",
             "score": 16,
-            "description": "An agar.io-like game. <br> My friend and I started this game a long time ago and later on we decided to continue. <br>Since it's hosted on a free hosting site, you will have to wait a while for it to start. <br><br>The goal is to defend your \"core\" with walls and turrets, which you can buy with coins. <br> It is a multiplayer-game, so you have to destroy the \"core\" of other players. <br><br>Controls: <br>- WASD to move around <br>- ENTER to chat <br>- B to toggle build mode <br>- F to open shop <br>"
+            "description": "An agar.io-like game. <br> My friend and I started this game a long time ago and later on we decided to continue. <br>Since it's hosted on a free hosting site, you will have to wait a while for it to start. <br><br>The goal is to defend your \"core\" with walls and turrets, which you can buy with coins. <br> It is a multiplayer-game, so you have to destroy the \"core\" of other players. <br><br>Controls: <br>- WASD to move around <br>- ENTER to chat <br>- B to toggle build mode <br>- F to open shop <br>",
+            "techStack": [
+                "Javascript",
+                "Node.js",
+                "Socket.io",
+                "Express",
+                "HTML Canvas"
+            ],
+            "tags": [
+                "Game",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "3D engine",
@@ -132,16 +144,15 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/3Dengine",
             "created": "15/01/2019",
             "score": 15,
-            "description": "A 3D-engine fully custom made uses html canvas."
-        },
-        {
-            "title": "3D multiplayer",
-            "image": "https://i.imgur.com/3EJ8mUf.png",
-            "link": "https://yeetoos3d.herokuapp.com/",
-            "code": "https://github.com/Mart100/Yeetoos3D",
-            "created": "25/01/2019",
-            "score": 8,
-            "description": "Copied the 3D-engine. And tried to make it into a 3D multiplayer shooter. Still working on this."
+            "description": "A 3D-engine fully custom made uses html canvas.",
+            "techStack": [
+                "Javascript",
+                "HTML Canvas"
+            ],
+            "tags": [
+                "3D",
+                "Game"
+            ]
         },
         {
             "title": "Rock Paper Sciccors Cellular Automaton",
@@ -195,7 +206,14 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/terrainGeneration",
             "created": "04/03/2019",
             "score": 15,
-            "description": "a random terrain generator.<br>That makes use of multiple noise layers onto eachother"
+            "description": "a random terrain generator.<br>That makes use of multiple noise layers onto eachother",
+            "techStack": [
+                "Javascript",
+                "HTML Canvas"
+            ],
+            "tags": [
+                "Simulation"
+            ]
         },
         {
             "title": "Particles",
@@ -212,7 +230,15 @@
             "link": "https://chatty1.herokuapp.com/",
             "created": "23/03/2019",
             "score": 15,
-            "description": "A simple chatApp made with socket.io and firebase"
+            "description": "A simple chatApp made with socket.io and firebase",
+            "techStack": [
+                "Node.js",
+                "Socket.io",
+                "Firebase"
+            ],
+            "tags": [
+                "Website"
+            ]
         },
         {
             "title": "Toorney",
@@ -220,15 +246,20 @@
             "link": "https://mart100.github.io/toorney",
             "created": "07/06/2019",
             "score": 100,
-            "description": "A discord bot and site using challonge for easy tournament hosting."
-        },
-        {
-            "title": "QuizByte",
-            "image": "https://i.imgur.com/8lFdph4.png",
-            "link": "http://quizbyte.co",
-            "created": "07/07/2019",
-            "score": 8,
-            "description": "A site where everyone can create and play quizzes"
+            "description": "A discord-bot and website to automate tournaments. This project has been sold to Tourneybot.gg",
+            "techStack": [
+                "Express",
+                "Jquery",
+                "Vercel",
+                "Javascript",
+                "CSS",
+                "Firebase",
+                "Discord.js"
+            ],
+            "tags": [
+                "Discord Bot",
+                "Website"
+            ]
         },
         {
             "title": "MouseStrat",
@@ -262,7 +293,17 @@
             "code": "https://github.com/Mart100/brainTrain",
             "created": "14/07/2019",
             "score": 8,
-            "description": "Simple project with my dad. Where you have to remember numbers. "
+            "description": "Simple project with my dad. Where you have to remember numbers. ",
+            "techStack": [
+                "Javascript",
+                "Jquery",
+                "Chart.js",
+                "Firebase"
+            ],
+            "tags": [
+                "Website",
+                ""
+            ]
         },
         {
             "title": "Dext",
@@ -280,7 +321,14 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/MindMap",
             "created": "13/08/2019",
             "score": 15,
-            "description": "A tool to make mind maps!"
+            "description": "A tool to make mind maps!",
+            "techStack": [
+                "Javascript",
+                "Jquery"
+            ],
+            "tags": [
+                "Website"
+            ]
         },
         {
             "title": "Type Speed",
@@ -289,7 +337,14 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/typeSpeed",
             "created": "31/08/2019",
             "score": 12,
-            "description": "A tool to test your typing speed!"
+            "description": "A tool to test your typing speed!",
+            "techStack": [
+                "Javascript",
+                "Jquery"
+            ],
+            "tags": [
+                "Website"
+            ]
         },
         {
             "title": "Moosic",
@@ -298,7 +353,20 @@
             "code": "https://github.com/Mart100/Moosic",
             "created": "07/09/2019",
             "score": 16.2,
-            "description": "A music player which uses youtube."
+            "description": "A music player which uses youtube.",
+            "techStack": [
+                "Electron",
+                "Flutter",
+                "Node.js",
+                "Firebase",
+                "Socket.io",
+                "Typescript",
+                "Jquery"
+            ],
+            "tags": [
+                "Desktop App",
+                "Mobile App"
+            ]
         },
         {
             "title": "StickyParticles",
@@ -315,7 +383,16 @@
             "link": "https://blonk.herokuapp.com",
             "created": "20/11/2019",
             "score": 16,
-            "description": "A 2D topdown multiplayer shooter"
+            "description": "A 2D topdown multiplayer shooter",
+            "techStack": [
+                "Node.js",
+                "Socket.io",
+                "Javascript"
+            ],
+            "tags": [
+                "Game",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Dualistic",
@@ -349,7 +426,14 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/3DterrainNoise",
             "created": "06/06/2019",
             "score": 10,
-            "description": "Some random terrain noise height. With fully custom made 3D engine"
+            "description": "Some random terrain noise height. With fully custom made 3D engine",
+            "techStack": [
+                "Javascript"
+            ],
+            "tags": [
+                "3D",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Trashcan Projects",
@@ -394,7 +478,15 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/dungeoons",
             "created": "10/04/2020",
             "score": 15.1,
-            "description": "Survive in an infinite random generated dungeons game!"
+            "description": "Survive in an infinite random generated dungeons game!",
+            "techStack": [
+                "Javascript",
+                "Jquery"
+            ],
+            "tags": [
+                "Game",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "HFF maps",
@@ -428,7 +520,15 @@
             "code": "https://github.com/Mart100/Explora",
             "created": "10/05/2019",
             "score": 10.1,
-            "description": "An attempt to make windows explorer using electron"
+            "description": "An attempt to make windows explorer using electron",
+            "techStack": [
+                "Electron",
+                "Node.js",
+                "Jquery"
+            ],
+            "tags": [
+                "Desktop App"
+            ]
         },
         {
             "title": "Minecraft Servers",
@@ -436,7 +536,14 @@
             "link": "https://mart100.github.io/mcservers",
             "created": "10/03/2020",
             "score": 15.1,
-            "description": "A list of minecraft servers I made, for these I coded a lot of custom behavior in the programming language \"Skript\". These were hosted on minehut."
+            "description": "A list of minecraft servers I made, for these I coded a lot of custom behavior in the programming language \"Skript\". These were hosted on minehut.",
+            "techStack": [
+                "Skript",
+                "Java"
+            ],
+            "tags": [
+                "Minecraft"
+            ]
         },
         {
             "title": "Distats",
@@ -445,7 +552,13 @@
             "code": "https://github.com/Mart100/discordMessagesStats",
             "created": "21/01/2020",
             "score": 14.05,
-            "description": "An application that extracts statistics from a discord server and makes handy graphs"
+            "description": "An application that extracts statistics from a discord server and makes handy graphs",
+            "techStack": [
+                "Node.js",
+                "Electron",
+                "Chart.js",
+                "Jquery"
+            ]
         },
         {
             "title": "MonitorSim",
@@ -463,7 +576,14 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/raytracing",
             "created": "08/05/2020",
             "score": 14,
-            "description": "It uses raytracing so cast a view of a 3D scene"
+            "description": "It uses raytracing so cast a view of a 3D scene",
+            "techStack": [
+                "Javascript"
+            ],
+            "tags": [
+                "3D",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "HRinfo",
@@ -472,7 +592,18 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/HRinfo",
             "created": "15/05/2019",
             "score": 15.3,
-            "description": "This was an information and community site + discord bot for an upcomming game named Helmet Royale."
+            "description": "This was an information and community site + discord bot for an upcomming game named Helmet Royale.",
+            "techStack": [
+                "Node.js",
+                "Express",
+                "Discord.js",
+                "Jquery",
+                "Firebase"
+            ],
+            "tags": [
+                "Discord Bot",
+                "Website"
+            ]
         },
         {
             "title": "Market Simu",
@@ -484,7 +615,7 @@
             "description": "A program that simulates an open market making products."
         },
         {
-            "title": "Blog",
+            "title": "Older Blogs",
             "image": "https://i.imgur.com/tkBZR4n.png",
             "link": "https://mart100.github.io/blog",
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/blog",
@@ -508,7 +639,14 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/keepingTrack",
             "created": "04/08/2020",
             "score": 14,
-            "description": "An app to keep track of your habits made in flutter"
+            "description": "An app to keep track of your habits made in flutter",
+            "techStack": [
+                "Flutter",
+                "Firebase"
+            ],
+            "tags": [
+                "Mobile App"
+            ]
         },
         {
             "title": "treesFog / 2D raytracer",
@@ -543,7 +681,12 @@
             "link": "https://mart100.github.io/randum",
             "created": "18/12/2020",
             "score": 16,
-            "description": "A discord bot that send a wide variety of random things"
+            "description": "A discord bot that send a wide variety of random things",
+            "techStack": [
+                "Node.js",
+                "Discord.js",
+                "Axios"
+            ]
         },
         {
             "title": "Train-Pain",
@@ -552,7 +695,16 @@
             "code": "https://github.com/Mart100/Train-Pain",
             "created": "14/03/2021",
             "score": 15.5,
-            "description": "Trains"
+            "description": "Trains",
+            "techStack": [
+                "Javascript",
+                "Express",
+                "Socket.io"
+            ],
+            "tags": [
+                "Game",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Spaceship-animation",
@@ -561,7 +713,13 @@
             "code": "https://github.com/Mart100/Mart100.github.io/tree/master/coolSomething",
             "created": "07/02/2021",
             "score": 13,
-            "description": "An animation"
+            "description": "An animation",
+            "techStack": [
+                "Javascript"
+            ],
+            "tags": [
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Odin",
@@ -570,7 +728,16 @@
             "code": "https://github.com/Mart100/Odin",
             "created": "01/06/2021",
             "score": 15.4,
-            "description": "Simulation of people"
+            "description": "Simulation of people",
+            "techStack": [
+                "Javascript",
+                "Jquery"
+            ],
+            "tags": [
+                "Simulation",
+                "Game",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Transporty",
@@ -579,7 +746,17 @@
             "code": "https://github.com/Mart100/transporty",
             "created": "17/02/2022",
             "score": 20,
-            "description": "Simulation of traffic, and metro systems"
+            "description": "Simulation of traffic, and metro systems",
+            "techStack": [
+                "Typescript",
+                "React",
+                "Jquery"
+            ],
+            "tags": [
+                "Simulation",
+                "Game",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Car AI",
@@ -588,7 +765,16 @@
             "code": "https://github.com/Mart100/SimpleCarAI",
             "created": "08/3/2023",
             "score": 25,
-            "description": "A generational neural network learning how to drive."
+            "description": "A generational neural network learning how to drive. Click \"Start Evolution\" at the bottom to start.",
+            "techStack": [
+                "Typescript",
+                "Vite"
+            ],
+            "tags": [
+                "AI",
+                "Simulation",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Belts",
@@ -597,7 +783,17 @@
             "code": "https://github.com/Mart100/belts",
             "created": "05/08/2023",
             "score": 16,
-            "description": "Make a little factory with some simple tools"
+            "description": "Make a little factory with some simple tools",
+            "techStack": [
+                "Typescript",
+                "Svelte",
+                "Vite"
+            ],
+            "tags": [
+                "Simulation",
+                "Game",
+                "HTML Canvas"
+            ]
         },
         {
             "title": "Learning The Useless",
@@ -606,7 +802,35 @@
             "code": "https://github.com/Mart100/LearningTheUseless",
             "created": "07/09/2023",
             "score": 50,
-            "description": "A website to learn various useless things, with an account system and friends system with a leaderboard."
+            "description": "A website to learn various useless things, with an account system and friends system with a leaderboard.",
+            "techStack": [
+                "Svelte",
+                "Supabase",
+                "Vercel",
+                "Typescript",
+                "Sass",
+                "Chart.js"
+            ],
+            "tags": [
+                "Website"
+            ]
+        },
+        {
+            "title": "Discord Democracy Bot",
+            "image": "https://i.imgur.com/7mVq1Ku.png",
+            "created": "07/09/2023",
+            "score": 20,
+            "description": "Democratically Run Discord Server. A discord bot that automated the process of voting on changes in a discord server.",
+            "techStack": [
+                "Discord.js",
+                "Node.js",
+                "Vercel",
+                "Typescript",
+                "Prisma"
+            ],
+            "tags": [
+                "Discord Bot"
+            ]
         }
     ]
 }

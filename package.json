@@ -7,9 +7,10 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxt/image": "1.5.0",
-    "sass": "^1.75.0",
     "@nuxt/content": "^2.12.1",
-    "nuxt": "3.11.2"
+    "@nuxt/image": "1.5.0",
+    "nuxt": "3.11.2",
+    "nuxt-icon": "^0.6.10",
+    "sass": "^1.75.0"
   }
 }
