@@ -20,8 +20,8 @@ export function parseSkillsJson(json: any): SkillData[] {
     let skills: SkillData[] = []
     for (let skill of json) {
         if (skill.isProcessed != true) {
-            if (skill.logo.startsWith('~/'))
-                skill.logo = skill.logo.replace('~/', '../img/skills/')
+            // if (skill.logo.startsWith('~/'))
+            //     skill.logo = skill.logo.replace('~/', '../img/skills/')
 
             skill.isProcessed = true
         }

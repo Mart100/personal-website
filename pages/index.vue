@@ -13,8 +13,8 @@ useHead({
   <TheHeader></TheHeader>
   <h1>Mart van Enckevort</h1>
   <p class="subtext">
-    👋 Hi, I'm Mart van Enckevort, a student from the Netherlands<br>
-    This is my site where you can find all of my projects
+    👋 Hi, I'm Mart, a 20 year old software engineer from the Netherlands<br>
+    Welcome to my personal site, showcasing a portfolio of my projects.
   </p>
 
   <Projects></Projects>
@@ -40,7 +40,7 @@ body {
     position: relative;
 
     >h1 {
-      font-size: 7vw;
+      font-size: 5em;
       font-weight: 100;
       margin: auto;
       text-align: center;
@@ -48,7 +48,7 @@ body {
     }
 
     >.subtext {
-      font-size: 1.2vw;
+      font-size: 1.2em;
       font-weight: 500;
       margin: auto;
       text-align: center;
@@ -56,10 +56,10 @@ body {
     }
 
     h2 {
-      font-size: 5vw;
+      font-size: 4em;
       font-weight: 100;
       margin: auto;
-      margin-top: 20vh;
+      margin-top: 10vh;
       text-align: center;
       color: white;
     }

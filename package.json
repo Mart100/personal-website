@@ -11,6 +11,10 @@
     "@nuxt/image": "1.5.0",
     "nuxt": "3.11.2",
     "nuxt-icon": "^0.6.10",
+    "prisma": "^5.12.1",
     "sass": "^1.75.0"
+  },
+  "dependencies": {
+    "@prisma/client": "5.12.1"
   }
 }

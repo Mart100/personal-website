@@ -69,7 +69,7 @@ nav {
 		.nav-item {
 			display: inline-block;
 			margin: auto;
-			font-size: 16px;
+			font-size: 20px;
 
 			&.active a {
 				color: white;
@@ -80,6 +80,19 @@ nav {
 			height: 100%;
 			margin: auto;
 			display: inline-block;
+			animation: fish-move 3s infinite ease-in-out;
+		}
+
+		@keyframes fish-move {
+
+			0%,
+			100% {
+				transform: rotate(-5deg);
+			}
+
+			50% {
+				transform: rotate(-10deg);
+			}
 		}
 
 		a {

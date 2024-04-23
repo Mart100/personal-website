@@ -8,10 +8,6 @@ const socials = {
 		link: 'https://i.imgur.com/eaqjvxs.png',
 		image: 'img/socials/discord.png'
 	},
-	sololearn: {
-		link: 'https://www.sololearn.com/Profile/7589669',
-		image: 'img/socials/sololearn.png'
-	},
 	steam: {
 		link: 'https://steamcommunity.com/id/Marto_0',
 		image: 'img/socials/steam.png'
