@@ -1,17 +1,22 @@
 <script setup lang="ts">
-import type { ProjectData } from '~/types/types';
+import type { ParsedContent } from '@nuxt/content/types';
 
 
 let projectsElement = ref<HTMLElement>()
 let moreProjectsElement = ref<HTMLElement>()
 
-let { projects, skills } = await useAsyncData("all", () => queryContent('data').find()).then(({ data }) => {
+const projects = await fetchProjects()
 
-	return {
-		projects: ref(parseProjectsJson(data.value![0].projects)),
-		skills: ref(parseSkillsJson(data.value![1].skills))
+const { data } = await useAsyncData('projects-blogs', () => queryContent('blog').find())
+
+data.value?.forEach((blog: ParsedContent) => {
+	let project = projects.value.find((project) => project.title === blog.title)
+	if (project && blog._path) {
+		project.article = blog._path
 	}
 })
+
+const skills = await fetchSkills()
 
 const skillIcons: Record<string, string> = skills.value.reduce((acc, skill) => {
 	acc[skill.name] = skill.icon
@@ -57,7 +62,7 @@ function moreProjects(event: Event) {
 
 <template>
 	<div id="projects">
-		<h2>
+		<h2 class="homepage">
 			<div class="sortOption" @click="sortClick">Best</div>Projects
 		</h2>
 
@@ -74,8 +79,6 @@ function moreProjects(event: Event) {
 </template>
 
 <style lang="scss" scoped>
-#projects {}
-
 h2 {
 	user-select: none;
 	position: relative;
@@ -136,9 +139,8 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
-	h2 .sortOption {
-		transform: translateX(-130%);
-		width: 20%;
+	h2 {
+		font-size: 2em !important;
 	}
 }
 </style>

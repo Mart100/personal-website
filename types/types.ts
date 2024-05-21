@@ -1,12 +1,13 @@
 export interface ProjectData {
+    id: string
     title: string
     image: string
-    link: string
-    code: string
+    link: string | null
+    code: string | null
+    article: string | null
     created: Date
     score: number
     description: string
-    isProcessed: boolean
     techStack: string[]
     tags: string[]
 }
@@ -17,6 +18,5 @@ export interface SkillData {
     name: string
     duration: string
     big?: boolean
-    isProcessed: boolean
     icon: string
 }

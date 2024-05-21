@@ -10,14 +10,16 @@ let background = ref(null as HTMLCanvasElement | null)
 let animationFrameId: number | null = null;
 let intervalId: NodeJS.Timeout | null = null;
 
+let particles: Particle[] = []
+let lines: [Particle, Particle][] = []
+
 onMounted(async () => {
 
 	const nuxtRoot = document.getElementById("__nuxt")!
 	let canvas = background.value!
 	let ctx = canvas.getContext('2d')!
 
-	let particles: Particle[] = []
-	let lines: [Particle, Particle][] = []
+
 	const speed = 0.5
 	const fpsController = {
 		fpsInterval: 50,
@@ -122,6 +124,8 @@ onMounted(async () => {
 onBeforeUnmount(() => {
 	if (animationFrameId) window.cancelAnimationFrame(animationFrameId)
 	if (intervalId) clearInterval(intervalId)
+	particles = []
+	lines = []
 })
 
 </script>

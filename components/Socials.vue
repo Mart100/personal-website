@@ -24,7 +24,7 @@ const socials = {
 </script>
 
 <template>
-	<h2 id="socials">Socials</h2>
+	<h2 id="socials" class="homepage">Socials</h2>
 	<div class="socials">
 		<a :href="social.link" class="social" v-for="(social, index) in socials" v-bind:key="index">
 			<NuxtImg class="logo" :src="social.image" />
@@ -61,7 +61,7 @@ h2 {
 
 		&:hover {
 			box-shadow: 0 10px 30px -5px rgba(0, 0, 0, .5);
-			transform: translateY(10px);
+			transform: translateY(-10px);
 		}
 
 		.logo {

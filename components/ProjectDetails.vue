@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ProjectData } from '~/types/types'
-import { defineProps, defineEmits } from 'vue'
 
 interface Props {
     project: ProjectData,
@@ -23,6 +22,7 @@ function close() {
             <a class="image-container" :href="project.link">
                 <div class="image" :style="{ 'background-image': `url(${project.image})` }"></div>
             </a>
+            <NuxtLink class="article" v-if="project.article" :to="project.article">Article</NuxtLink>
             <a class="code" v-if="project.code" :href="project.code">Source Code</a>
             <h1 class="name">{{ project.title }}</h1>
             <div class="tags">
@@ -65,6 +65,7 @@ function close() {
     border-radius: 20px;
     width: 500px;
     box-shadow: rgba(0, 0, 0, 0.7) 0px 15px 50px -10px;
+    margin: 20px;
 
     .content {
         padding: 20px;
@@ -119,7 +120,8 @@ function close() {
         }
     }
 
-    .code {
+    .code,
+    .article {
         position: absolute;
         top: 170px;
         right: 5px;
@@ -131,11 +133,18 @@ function close() {
         font-weight: bold;
         text-shadow: 0 0 20px rgba(0, 0, 0, 1);
         text-decoration: none;
+        padding: 5px;
 
         &:hover {
             text-decoration: underline;
             text-shadow: 0 0 5px rgba(0, 0, 0, 1);
         }
+    }
+
+    .article {
+        left: 5px;
+        right: auto;
+        text-align: left;
     }
 
     .tags {
@@ -165,6 +174,7 @@ function close() {
         margin-top: 5px;
         left: 60px;
         font-size: 2em;
+        text-align: left;
     }
 
     .image-container {
@@ -182,6 +192,7 @@ function close() {
             top: 50%;
             right: 50%;
             transform: translate(50%, -50%);
+            pointer-events: none;
             color: rgba(255, 255, 255, 0.7);
             opacity: 0;
             font-size: 20px;
@@ -217,6 +228,15 @@ function close() {
             left: 0;
             background: radial-gradient(ellipse at bottom right, transparent, rgba(0, 0, 0, 0.7) 90%);
             pointer-events: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .image-container {
+        &::after {
+            opacity: 1 !important;
+            text-decoration: underline;
         }
     }
 }

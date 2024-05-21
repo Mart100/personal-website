@@ -28,7 +28,7 @@ watch(searchInput, (search) => {
 
 <style lang="scss" scoped>
 .wrapper {
-	height: 500px;
+	height: 300px;
 }
 
 .skillSearch {
