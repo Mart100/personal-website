@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@nuxtjs/dotenv':
-        specifier: ^1.4.2
-        version: 1.4.2
       '@prisma/client':
         specifier: 5.15.0
         version: 5.15.0(prisma@5.15.0)
@@ -556,9 +553,6 @@ packages:
     engines: {node: ^14.18.0 || >=16.10.0}
     peerDependencies:
       vue: ^3.3.4
-
-  '@nuxtjs/dotenv@1.4.2':
-    resolution: {integrity: sha512-/3+Cw5qLNIQD8ZvXLJG1suxvfC4ltlUuYegOwirHrLrzptHh/+rCkBXrNbrz2qAiwc+/yK91XjZGGzNM1dFmCw==}
 
   '@nuxtjs/mdc@0.6.1':
     resolution: {integrity: sha512-zS5QK7DZ/SBrjqQX1DOy7GnxKy+wbj2+LvooefOWmQqHfLTAqJLVIjuv/BmKnQWiRCq19+uysys3iY42EoY5/A==}
@@ -1761,10 +1755,6 @@ packages:
   dotenv@16.4.5:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
     engines: {node: '>=12'}
-
-  dotenv@8.6.0:
-    resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
-    engines: {node: '>=10'}
 
   duplexer@0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
@@ -4946,11 +4936,6 @@ snapshots:
       - vti
       - vue-tsc
 
-  '@nuxtjs/dotenv@1.4.2':
-    dependencies:
-      consola: 3.2.3
-      dotenv: 8.6.0
-
   '@nuxtjs/mdc@0.6.1(rollup@4.14.3)':
     dependencies:
       '@nuxt/kit': 3.11.2(rollup@4.14.3)
@@ -6313,8 +6298,6 @@ snapshots:
       type-fest: 3.13.1
 
   dotenv@16.4.5: {}
-
-  dotenv@8.6.0: {}
 
   duplexer@0.1.2: {}
 
