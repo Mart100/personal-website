@@ -24,7 +24,7 @@ function closeDetails() {
 <template>
 	<div class="project" @click.self="showDetails">
 		<h3 class="title" @click.self="showDetails">{{ project.title }}</h3>
-		<NuxtImg :src="project.image" @click="showDetails"></NuxtImg>
+		<NuxtImg width="170px" height="170px" format="webp" :src="project.image" @click="showDetails"></NuxtImg>
 
 	</div>
 	<ProjectDetails v-if="showModal" :project="project" :skill-icons="skillIcons" @close="closeDetails" />
