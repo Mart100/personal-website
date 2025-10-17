@@ -14,22 +14,24 @@ const featured2 = projects.value.find(project => project.title === 'Toorney')
 </script>
 
 <template>
-  <Background></Background>
-  <TheHeader></TheHeader>
-  <h1 class="name">Mart van Enckevort</h1>
-  <p class="subtext">
-    👋 Hi, I'm Mart, a 20-year-old software engineer from the Netherlands<br>
-    Welcome to my personal site, showcasing a portfolio of my projects.
-  </p>
-  <h2 class="homepage">Featured Projects</h2>
-  <div class="featureds">
-    <FeaturedProject :project="featured1"></FeaturedProject>
-    <FeaturedProject :project="featured2"></FeaturedProject>
+  <div id="homepage">
+    <Background></Background>
+    <TheHeader></TheHeader>
+    <h1 class="name">Mart van Enckevort</h1>
+    <p class="subtext">
+      👋 Hi, I'm Mart, a 20-year-old software engineer from the Netherlands<br>
+      Welcome to my personal site, showcasing a portfolio of my projects.
+    </p>
+    <h2 class="homepage">Featured Projects</h2>
+    <div class="featureds">
+      <FeaturedProject :project="featured1"></FeaturedProject>
+      <FeaturedProject :project="featured2"></FeaturedProject>
+    </div>
+    <Projects></Projects>
+    <Skills></Skills>
+    <Socials></Socials>
+    <br><br><br>
   </div>
-  <Projects></Projects>
-  <Skills></Skills>
-  <Socials></Socials>
-  <br><br><br>
 </template>
 
 <style lang="scss" scoped>

@@ -1,13 +1,16 @@
 import bcrypt from 'bcrypt'
 import { v4 as uuidv4 } from 'uuid'
+import { sessions } from '../../utils/sessions'
 
 
 const storedPasswordHash = '$2b$10$9p83p0GVcax/6RQSyzhKTOjiZWucQ/h6veBvFo5JM.gP1QUQvlqZq'
 
-const sessions = new Map()
-
 const loginRoute = defineEventHandler(async (event) => {
-    const body = await readBody(event)
+    console.log(event.context.authenticated)
+    if (event.context.authenticated) {
+        return { success: true }
+    }
+    const body = await readBody(event) as { password: string }
     const enteredPassword = body.password
 
     //bcrypt.hash("password", 10).then((hash) => console.log(hash))

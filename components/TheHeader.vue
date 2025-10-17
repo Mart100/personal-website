@@ -34,28 +34,34 @@ onUnmounted(() => {
 
 // make carrot swim across the screen
 async function carrotClick(event: Event) {
-	const el = event.target as HTMLImageElement
-	el.style.position = 'absolute'
-	let originalAnimation = el.style.animation
-	el.style.animation = 'fast-fish-move 300ms infinite ease-in-out'
-	el.style.left = `0%`
 
-	for (let i = 0; i < 100; i++) {
-		await sleep(10)
-		el.style.left = `${i}%`
+	if (window.scrollY === 0) {
+		const el = event.target as HTMLImageElement
+		el.style.position = 'absolute'
+		let originalAnimation = el.style.animation
+		el.style.animation = 'fast-fish-move 300ms infinite ease-in-out'
+		el.style.left = `0%`
+
+		for (let i = 0; i < 100; i++) {
+			await sleep(10)
+			el.style.left = `${i}%`
+		}
+
+		// flip the image
+		el.style.animation = 'fast-fish-move-backwards 300ms infinite ease-in-out'
+
+		for (let i = 0; i < 100; i++) {
+			await sleep(10)
+			el.style.left = `${100 - i}%`
+		}
+
+		el.style.position = 'static'
+		el.style.animation = originalAnimation
+
+	} else {
+		// scroll to the top
+		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
-
-	// flip the image
-	el.style.animation = 'fast-fish-move-backwards 300ms infinite ease-in-out'
-
-	for (let i = 0; i < 100; i++) {
-		await sleep(10)
-		el.style.left = `${100 - i}%`
-	}
-
-	el.style.position = 'static'
-	el.style.animation = originalAnimation
-
 }
 
 
