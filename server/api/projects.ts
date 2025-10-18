@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client'
-import type { ProjectData } from '~/types/types'
+import type { ProjectData } from '~~/types/types'
 
 const prisma = new PrismaClient()
 
@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     })
 
     const projects2: ProjectData[] = projects.map((project) => {
-        let dateParts = project.created.split('/')
+        let dateParts = project.created.split('/') as [string, string, string]
         let dateObject = new Date(+dateParts[2], +dateParts[1] - 1, +dateParts[0])
 
         return {

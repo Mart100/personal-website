@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'admin',
 });
 
-import type { ProjectData } from '~/types/types';
+import type { ProjectData } from '~~/types/types';
 
 const projects = await fetchProjects()
 

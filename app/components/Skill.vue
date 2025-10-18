@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { SkillData } from '~/types/types';
+import type { SkillData } from '~~/types/types'
 
 
 defineProps<{ skill: SkillData }>()
@@ -9,7 +9,7 @@ defineProps<{ skill: SkillData }>()
 
 <template>
 	<div class="skill">
-		<Icon :name="skill.icon" size="52" />
+		<UIcon :name="skill.icon" size="52" />
 		<div class="details">
 			<span><span class="name">{{ skill.name }}</span><span class="duration">{{ skill.duration }}</span><span
 					class="knowledge">{{ skill.knowledge }}%</span></span>

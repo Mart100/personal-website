@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProjectData } from '~/types/types';
+import type { ProjectData } from '~~/types/types';
 
 
 const props = defineProps<{
@@ -15,7 +15,7 @@ function submitForm() {
 
     props.project.tags = tags.value.split(',').map(tag => tag.trim());
     props.project.techStack = techStack.value.split(',').map(tag => tag.trim());
-    props.project.created = new Date(date.value);
+    props.project.created = new Date(date.value!);
 
     emits('update', props.project);
     close();

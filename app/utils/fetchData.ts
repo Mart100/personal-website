@@ -1,4 +1,4 @@
-import type { ProjectData, SkillData } from "~/types/types"
+import type { ProjectData, SkillData } from "~~/types/types"
 
 
 export async function fetchProjects() {

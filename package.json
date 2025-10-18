@@ -1,26 +1,33 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "start": "node .output/server/index.mjs",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "build": "bunx nuxt build",
+    "start": "bunx nuxt start",
+    "dev": "bunx nuxt dev",
+    "generate": "bunx nuxt generate",
+    "preview": "bunx nuxt preview"
   },
+  "packageManager": "bun@1.3.0",
   "devDependencies": {
-    "@nuxt/content": "^2.12.1",
-    "@nuxt/image": "1.7.0",
-    "@types/uuid": "^9.0.8",
-    "nuxt": "3.11.2",
-    "nuxt-icon": "^0.6.10",
-    "prisma": "^5.15.0",
-    "sass": "^1.77.4"
+    "@iconify-json/devicon": "^1.2.45",
+    "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/skill-icons": "^1.2.3",
+    "@types/uuid": "^11.0.0",
+    "nuxt": "^4.1.3",
+    "prisma": "^6.17.1",
+    "sass": "^1.93.2",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.1"
   },
   "dependencies": {
-    "@prisma/client": "5.15.0",
-    "@types/bcrypt": "^5.0.2",
-    "bcrypt": "^5.1.1",
-    "uuid": "^10.0.0"
+    "@nuxt/content": "^3.7.1",
+    "@nuxt/image": "1.11.0",
+    "@nuxt/ui": "^4.0.1",
+    "@prisma/client": "6.17.1",
+    "@types/bcrypt": "^6.0.0",
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^12.4.1",
+    "uuid": "^13.0.0"
   },
   "engines": {
     "node": "20.14.0"

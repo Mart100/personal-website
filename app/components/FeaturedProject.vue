@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProjectData } from '~/types/types';
+import type { ProjectData } from '~~/types/types';
 
 interface Props {
     project: ProjectData,
@@ -9,7 +9,7 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-    <a class="featured" :href="project.link">
+    <a class="featured" :href="project.link!">
         <NuxtImg class="image" :src="project.image"></NuxtImg>
         <div class="info">
             <h2 class="title">{{ project.title }}</h2>

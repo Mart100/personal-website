@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { SkillData } from '~/types/types';
+import type { SkillData } from '~~/types/types';
 
 
 const props = defineProps<{ skills: SkillData[] }>()

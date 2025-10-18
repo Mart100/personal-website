@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content/types';
+import type { ParsedContentv2 } from '@nuxt/content'
 
 
 let projectsElement = ref<HTMLElement>()
@@ -7,12 +7,12 @@ let moreProjectsElement = ref<HTMLElement>()
 
 const projects = await fetchProjects()
 
-const { data } = await useAsyncData('projects-blogs', () => queryContent('blog').find())
+const { data } = await useAsyncData('projects-blogs', () => queryCollection('content').path('blog').all())
 
-data.value?.forEach((blog: ParsedContent) => {
+data.value?.forEach((blog) => {
 	let project = projects.value.find((project) => project.title === blog.title)
-	if (project && blog._path) {
-		project.article = blog._path
+	if (project && blog.path) {
+		project.article = blog.path
 	}
 })
 

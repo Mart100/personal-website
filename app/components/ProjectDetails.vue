@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProjectData } from '~/types/types'
+import type { ProjectData } from '~~/types/types'
 
 interface Props {
     project: ProjectData,
@@ -18,8 +18,8 @@ function close() {
 <template>
     <div class="modal" @click.self="close">
         <div class="modal-content">
-            <Icon class="goback" @click="close" name="material-symbols:arrow-back-rounded" size="1em" />
-            <a class="image-container" :href="project.link">
+            <UIcon class="goback" @click="close" name="material-symbols:arrow-back-rounded" size="1em" />
+            <a class="image-container" :href="project.link!">
                 <div class="image" :style="{ 'background-image': `url(${project.image})` }"></div>
             </a>
             <NuxtLink class="article" v-if="project.article" :to="project.article">Article</NuxtLink>
@@ -30,11 +30,12 @@ function close() {
             </div>
             <div class="content">
                 <p class="description">
-                <h3>Description</h3>{{ project.description }}</p>
+                    <span>Description</span>{{ project.description }}
+                </p>
                 <p class="techstack">
-                <h3>Tech Stack</h3>
+                    <span>Tech Stack</span>
                 <div class="tech" v-for="(item, index) in project.techStack">
-                    <Icon :name="skillIcons[item]" /><span class="name">{{ item }}</span>
+                    <UIcon :name="skillIcons[item]!" /><span class="name">{{ item }}</span>
                 </div>
                 </p>
             </div>
