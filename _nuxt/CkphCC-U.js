@@ -1,0 +1,1 @@
+import{A as s,d as a,h as o,e as t,_ as n}from"#entry";const d={class:"dashboard"},r=s({__name:"index",setup(_){return(c,e)=>(t(),a("div",d,[...e[0]||(e[0]=[o("div",null,"Dashboard!",-1)])]))}}),i=n(r,[["__scopeId","data-v-ee3b1465"]]);export{i as default};

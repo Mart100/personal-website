@@ -1,0 +1,1 @@
+import{A as o,y as t,d as s,g as n,a8 as c,e as _,_ as a}from"#entry";const r={class:"blog-content"},l=o({__name:"[...slug]",setup(p){return t({bodyAttrs:{class:"blog"}}),(d,m)=>{const e=c("ContentDoc");return _(),s("div",r,[n(e)])}}}),b=a(l,[["__scopeId","data-v-481cbbc7"]]);export{b as default};
